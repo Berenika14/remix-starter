@@ -1,6 +1,7 @@
+import animated from "~/assets/animated.png";
 export default function About() {
   return (
-    <div className="text-white">
+    <div className="text-white text-justify  p-32 ">
       <h2 className="mb-10  ">
         👋 Hi, I’m Berenika, a Full Stack Web Developer. ☞ Web Development calls
         to my passions: it integrates creativity and problem solving and I am
@@ -20,12 +21,8 @@ export default function About() {
         Code,Terminal, Postman, Vercel, Heroku, Algorithms, Debugging,
         Deployment
       </h2>
-
-      <div>
-        <img
-          src="https://c8.alamy.com/zooms/6/d7740d6eba8a49c386ac1d632e56b959/kd79rx.jpg"
-          alt="Girl coding"
-        ></img>
+      <div className="w-96 h-96 ml-8 flex flex-row-reverse">
+        <img src={animated} alt="girl coding" />
       </div>
     </div>
   );
