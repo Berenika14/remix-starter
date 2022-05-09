@@ -21,7 +21,12 @@ export default function Index() {
     <div>
       <div className={"bg-gray-100 p-5"}>
         <Form method="post">
-          <input name="name" />
+          <input
+            className="mb-5 border border-rose-600 rounded-lg"
+            name="name"
+          />
+          <br />
+          <input name="age" />
           <button type="submit">Create User</button>
         </Form>
       </div>

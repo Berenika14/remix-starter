@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div>
+    <div className="text-white">
       <h2 className="mb-10  ">
         👋 Hi, I’m Berenika, a Full Stack Web Developer. ☞ Web Development calls
         to my passions: it integrates creativity and problem solving and I am
@@ -20,10 +20,6 @@ export default function About() {
         Code,Terminal, Postman, Vercel, Heroku, Algorithms, Debugging,
         Deployment
       </h2>
-      <h3>
-        🔗Interested in collaborating on a project or program? Send me a message
-        or e-mail me at 📧 nikaa@hey.com
-      </h3>
 
       <div>
         <img
