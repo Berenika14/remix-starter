@@ -47,7 +47,7 @@ export default function App() {
             <HeaderLink to="/projects">Recent Projects</HeaderLink>
             <HeaderLink to="/contacts">Contacts</HeaderLink>
           </div>
-          <h3 className="flex-0">Berenika Ahmetaj</h3>
+          <h3 className="flex-0 text-white">Berenika Ahmetaj</h3>
         </header>
 
         <Outlet />
