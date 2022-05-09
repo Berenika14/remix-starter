@@ -17,19 +17,19 @@ export const loader: LoaderFunction = async (args) => {
   const where =
     typeof name === "string" && name.trim().length > 0
       ? {
-          name: name
+          name: name,
         }
       : undefined;
 
   const users = await db.user.findMany({
-    where
+    where,
   });
 
   const loaderData: LoaderData = {
     users,
     filters: {
-      name: searchParams.get("name")
-    }
+      name: searchParams.get("name"),
+    },
   };
   return loaderData;
 };
@@ -40,8 +40,8 @@ export const action: ActionFunction = async (args) => {
   await db.user.create({
     data: {
       name: userData.name as any,
-      age: "age" in userData ? parseInt(userData.age as any) : undefined
-    }
+      age: "age" in userData ? parseInt(userData.age as any) : undefined,
+    },
   });
   return redirect("/");
 };
@@ -59,6 +59,7 @@ export default function Index() {
           />
           <button type="submit">Show Matching Users</button>
         </Form>
+        <Link to="/user/create">Create</Link>
       </div>
       {users.map((user, i) => (
         <Link
