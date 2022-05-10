@@ -45,6 +45,7 @@ module.exports = {
   content: ["./app/**/*.tsx"],
   theme: {
     extend: {
+      backgroundImage: {},
       spacing: {
         25: "6.125rem",
         120: "7.5rem",

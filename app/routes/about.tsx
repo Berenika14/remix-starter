@@ -1,40 +1,49 @@
-import animated from "~/assets/animated.png";
+import animated from "~/assets/code-coffee.jpeg";
 import { getMembers } from "../../app/fetch/github";
 import { useLoaderData } from "@remix-run/react";
+import { json } from "@remix-run/node";
 
 export let loader = async () => {
-  return getMembers();
+  try {
+    console.log(`my loader is running!`);
+    return json(await getMembers());
+  } catch (e) {
+    console.log(`failed to fetch data from github!`, e);
+    throw new Response(e.message, { status: 500 });
+  }
 };
 export default function About() {
-  let user = useLoaderData();
-  console.log(user);
+  const user = useLoaderData();
   return (
-    <div className="text-white text-justify  p-32 ">
-      <h1>{user.bio}</h1>
-      <h2 className="mb-10  ">
-        ☞ Web Development calls to my passions: it integrates creativity and
-        problem solving and I am allowed to break the code to improve it (in a
-        different Git Branch, of course).
-      </h2>
-      <h2 className="mb-10  ">
-        My values: 🌻 Expressions as the authentic self 💜 Safety and trust 🧩
-        Beginners mindset and curiosity 🙌 Shared understanding and consensus
-      </h2>
-      <h2 className="mb-10  ">
-        🛠CurrentTech Stack : Frontend: JavaScript, React, Redux, HTML, CSS,
-        Hooks, Jest, Cypress, Yup, Axios, Responsiveness, Styled-Components,
-        SPAs Backend: Node.js, Express, SQL, PostgreSQL, SQLiteStudio, JSON Web
-        Tokens, REST APIs, Authentication, Testing Additional: Git, GitHub, VS
-        Code,Terminal, Postman, Vercel, Heroku, Algorithms, Debugging,
-        Deployment
-      </h2>
-      <div className="w-96 h-96 ml-8 flex flex-row-reverse">
-        <img src={animated} alt="girl coding" />
+    <div className="text-white text-justify p-32 relative bg-animated">
+      <div className=" flex  flex-wrap w-1/2">
+        <h2 className="mb-10 leading-loose ">
+          <h1 className=" font-bold text-orange-400 text-2xl ">About Me</h1>
+          <br />
+          {user.bio}
+          Web Development calls to my passions: it integrates creativity and
+          problem solving and I am allowed to break the code to improve it (in a
+          different Git Branch, of course). I am eager to learn programming
+          skills that will help the team succeed through creativity,
+          problem-solving and hard work.
+        </h2>
+        <h2 className="mb-10 leading-loose ">
+          My values:
+          <p>🌻 Expressions as the authentic self </p>
+          <p>💜 Safety and trust</p>
+          <p>🧩 Beginners mindset and curiosity</p>
+          <p>🙌 Shared understanding and consensus</p>
+        </h2>
       </div>
-      <div className="flex flex-row">
-        <h2>My Frontend Toolbox:</h2>
-        <br />
-        <p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1 className=" font-bold text-orange-400 text-2xl">Skills</h1>
+      <br />
+
+      <div className="flex space-x-24">
+        <div>
           <img
             src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
             alt="react badge"
@@ -55,11 +64,12 @@ export default function About() {
             src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
             alt="bootstrap"
           />
-        </p>
-        <br />
-        <h2>Backend Toolbox:</h2>
-        <br />
-        <p>
+          <img
+            src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+            alt="bootstrap"
+          />
+        </div>
+        <div>
           <img
             src="https://img.shields.io/badge/JavaScript-007ACC?style=for-the-badge&logo=javascript&logoColor=white"
             alt="javascript"
@@ -80,25 +90,32 @@ export default function About() {
             src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"
             alt="express"
           />
-        </p>
-        <br />
-        <h2>Cloud Hosting</h2>
-        <br />
-        <p>
+          <img
+            src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"
+            alt="postman"
+          />
+        </div>
+        <div>
           <img
             src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"
             alt="heroku"
           />
           <img
-            src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
-            alt="amazon"
+            src="	https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
+            alt="vercel"
           />
           <img
             src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"
             alt="netlify"
           />
-        </p>
+        </div>
+        <img
+          className="w-100 h-96 absolute  right-36 top-36"
+          src={animated}
+          alt="girl coding"
+        />
       </div>
+      <div></div>
     </div>
   );
 }
