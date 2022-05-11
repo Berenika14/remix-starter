@@ -43,7 +43,7 @@ export default function App() {
         <header className="flex flex-row  p-4 ">
           <div className="flex-1">
             <HeaderLink to="/">Home</HeaderLink>
-            <HeaderLink to="/about">About</HeaderLink>
+
             <HeaderLink to="/projects">Recent Projects</HeaderLink>
             <HeaderLink to="/contacts">Contacts</HeaderLink>
           </div>

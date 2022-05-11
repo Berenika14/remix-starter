@@ -45,12 +45,24 @@ module.exports = {
   content: ["./app/**/*.tsx"],
   theme: {
     extend: {
+      animation: {
+        "say-hi": "say-hi 1s ease-in",
+      },
+      keyframes: {
+        "say-hi": {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(-25deg)" },
+          // "50%": { transform: "rotate(0)" },
+          "75%": { transform: "rotate(35deg)" },
+        },
+      },
       backgroundImage: {},
       spacing: {
+        13: "3.25rem",
         25: "6.125rem",
         120: "7.5rem",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
