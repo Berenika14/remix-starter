@@ -25,7 +25,7 @@ export function links() {
 function HeaderLink({ to, children }: { to: string; children: string }) {
   return (
     <Link
-      className="px-4 py-2 hover:underline hover:text-orange-400 text-white text-lg font-medium"
+      className="px-4 py-2 hover:underline hover:text-orange-400 text-white text-lg font-medium "
       to={to}
     >
       {children}

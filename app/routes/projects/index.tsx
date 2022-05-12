@@ -6,37 +6,43 @@ function Badge({ src, alt }) {
     <img src={src} alt={alt} style={{ aspectRatio: "auto", width: 150 }} />
   );
 }
-export default function Projects() {
+export default function Projects({
+  className,
+  style,
+}: {
+  className?: string | undefined;
+  style?: any;
+}) {
   return (
-    <>
-      <div className=" mt-24 text-white gap-x-32 text-justify grid grid-cols-2 justify-items-center mx-14 ">
+    <div className={className} style={style}>
+      <div className="mt-24 text-white gap-x-32 text-justify grid grid-cols-2 justify-items-center mx-14 ">
         <div>
-          <h2 className="text-white opacity-70 font-bold text-2xl mb-5 grid justify-items-center">
-            CoderHeroes
+          <h2 className="text-white opacity-70 font-bold text-3xl mb-5 grid justify-items-center">
+            Coder Heroes
           </h2>
           <a href="https://a.coderheroes.dev/">
             <img
-              className="rounded-lg  object-cover h-fit ease-in-out duration-150 hover:scale-105"
+              className="rounded-lg  object-cover h-fit ease-in-out duration-200 hover:scale-105"
               src={coder}
               alt="coder"
             />
           </a>
-          <h3 className="font-bold opacity-80 text-xl mt-10 mb-4 ml-4">
-            BackEnd Developer
+          <h3 className="font-bold opacity-80 text-2xl mt-10 mb-4 ml-4">
+            Backend Developer
           </h3>
           <ul
             role="list"
-            className="marker:text-orange-500 list-disc pl-5 space-y-3 text-orange-50 opacity-50"
+            className="marker:text-orange-500 pr-10 text-lg list-disc pl-5 space-y-3 text-orange-50 opacity-50"
           >
-            <li>
-              Developed the registering endpoint allowing users to post to the
-              Okta Dashboard
+            <li className="pl-3">
+              Developed the registering endpoint using Okta identity cloud
+              allowing users to post to the Okta Dashboard and Database.
             </li>
-            <li>
+            <li className="pl-3">
               Created a library directory and API token to authenticate the post
               request for the registering endpoint in Node
             </li>
-            <li>
+            <li className="pl-3">
               Fixed bugs in the existing codebase by using the debugger tool in
               the vs code and testing the endpoints on postman which results in
               better functionality of the application
@@ -44,33 +50,33 @@ export default function Projects() {
           </ul>
         </div>
         <div>
-          <h2 className="text-white opacity-70 font-bold text-2xl mb-5 grid justify-items-center">
+          <h2 className="text-white opacity-70 font-bold text-3xl mb-5 grid justify-items-center">
             Anywhere Fitness
           </h2>
           <a href="https://front-end-git-main-ft-anywhere-fitness-09.vercel.app/">
             <img
-              className="rounded-lg  object-cover h-fit ease-in-out duration-125 hover:scale-105"
+              className="rounded-lg object-cover h-fit ease-in-out duration-200 hover:scale-105"
               src={anywhere}
               alt="anywhere"
             />
           </a>
-          <h3 className="font-bold opacity-80 text-xl mt-10 mb-4 ml-4">
+          <h3 className="font-bold opacity-80 text-2xl mt-10 mb-4 ml-4">
             Frontend Developer
           </h3>
           <ul
             role="list"
-            className="marker:text-orange-500 list-disc pl-5 space-y-3 text-orange-50 opacity-50"
+            className="marker:text-orange-500 pr-10 text-lg list-disc pl-5 space-y-3 text-orange-50 opacity-50"
           >
-            <li>
+            <li className="pl-3">
               Created a Fitness Class Management platform that allows users to
               select and sign up as an instructor or client
             </li>
-            <li>
+            <li className="pl-3">
               Built designated components using React, Context API for state
               management, and JWTs to ensure authorized users' login
               verification and CRUD operations for the class components
             </li>
-            <li>
+            <li className="pl-3">
               Added functionality by creating a Class Form component using React
               and Axios that enables client users to register for specific
               classes available and launched using Vercel
@@ -159,6 +165,6 @@ export default function Projects() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
