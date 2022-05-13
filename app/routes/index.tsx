@@ -34,7 +34,7 @@ export default function Homepage() {
             style={{ marginTop: -8 }}
             className="col-span-4 col-start-2 text-lg pb-8 mb:col-span-1 "
           >
-            <h2 className="mt-0 mb-6 text-2xl text-white opacity-80 mb:text-xl mb:mt-96">
+            <h2 className="mt-0 mb-6  text-2xl text-white opacity-80 mb:text-xl mb:mt-96">
               About Me
             </h2>
             <p className="opacity-50 mb:text-sm">
@@ -90,15 +90,16 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="col-span-4 min-h-96 relative mb:absolute  ">
+        <div className="col-span-4 min-h-96 relative mb:absolute  mb:ml-10  ">
           <img
             style={{ width: aspectRatio * 500 }}
-            className="static rounded-lg object-cover mb:mt-60 mb:h-[350px] h-[600px] mb:object-contain   "
+            className="static rounded-lg object-cover mb:mt-60 mb:h-[310px] h-[600px] mb:object-contain   "
             src={nika}
             alt="nika"
           />
         </div>
       </div>
+
       {SHOW_PROJECTS && (
         <div id="projects">
           <Projects className="mt-4 pt-4" />

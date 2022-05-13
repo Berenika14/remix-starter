@@ -575,6 +575,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.25rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1200,6 +1204,38 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 2.5rem;
   }
 
+  .mb\:ml-40 {
+    margin-left: 10rem;
+  }
+
+  .mb\:mr-20 {
+    margin-right: 5rem;
+  }
+
+  .mb\:mr-4 {
+    margin-right: 1rem;
+  }
+
+  .mb\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .mb\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
+  .mb\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .mb\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
+  .mb\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
   .mb\:grid {
     display: grid;
   }
@@ -1218,6 +1254,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .mb\:h-\[350px\] {
     height: 350px;
+  }
+
+  .mb\:h-\[250px\] {
+    height: 250px;
+  }
+
+  .mb\:h-\[280px\] {
+    height: 280px;
+  }
+
+  .mb\:h-\[290px\] {
+    height: 290px;
+  }
+
+  .mb\:h-\[295px\] {
+    height: 295px;
+  }
+
+  .mb\:h-\[310px\] {
+    height: 310px;
   }
 
   .mb\:min-h-0 {

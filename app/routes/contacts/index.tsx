@@ -61,7 +61,7 @@ export default function Contacts() {
 
       <div
         style={{ flex: "column", justifyContent: "center" }}
-        className="mt-24 text-orange-400 flex space-x-32 mb:grid mb:grid-cols-1 mb:space-y-4"
+        className="mt-4 text-orange-400 flex space-x-32 mb:grid mb:grid-cols-1 mb:space-y-4"
       >
         <div className=" hover:scale-105 hover:bg-gray-900 mb:space-x-0 mb:w-1/2 mb:ml-32">
           <IconCard
