@@ -39,11 +39,16 @@
  * 80:      20rem       320px
  * 96:      24rem       384px
  */
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
   content: ["./app/**/*.tsx"],
   theme: {
+    screens: {
+      ...defaultTheme.screens,
+      mb: { max: "639px" },
+    },
     extend: {
       animation: {
         "say-hi": "say-hi 1s ease-in",

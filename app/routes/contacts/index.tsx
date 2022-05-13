@@ -43,27 +43,27 @@ function IconCard({
 
 export default function Contacts() {
   return (
-    <div>
+    <div className="mb:mb-6">
       <div
         style={{ textAlign: "center" }}
-        className=" text-orange-500  text-2xl mb-20 mt-48 opacity-80"
+        className=" text-orange-500  text-2xl mb-20 mt-48 opacity-80 mb:mt-16 mb:mb-16"
       >
         Contact Me
       </div>
 
       <div
         style={{ flex: "column", justifyContent: "center" }}
-        className=" text-orange-400 flex  space-x-32 "
+        className=" text-orange-400 flex  space-x-32  mb:grid mb:grid-cols-1 mb:space-x-0 mb:w-1/2 mb:ml-32 mb:space-y-4 "
       >
-        <IconCard value="(555) 255-2222" icon="phone" label="Phone" />
+        <IconCard value="(347) 280-0754" icon="phone" label="Phone" />
         <IconCard icon="mail" value="nikaa@hey.com" label="Email" />
       </div>
 
       <div
         style={{ flex: "column", justifyContent: "center" }}
-        className="mt-24 text-orange-400 flex space-x-32 "
+        className="mt-24 text-orange-400 flex space-x-32 mb:grid mb:grid-cols-1 mb:space-y-4"
       >
-        <div className=" hover:scale-105 hover:bg-gray-900 ">
+        <div className=" hover:scale-105 hover:bg-gray-900 mb:space-x-0 mb:w-1/2 mb:ml-32">
           <IconCard
             value="@Berenika "
             label="Linked In"
@@ -71,7 +71,7 @@ export default function Contacts() {
             url="https://www.linkedin.com/in/berenika-ahmetaj/"
           />
         </div>
-        <div className=" hover:scale-105  hover:bg-gray-900  ">
+        <div className=" hover:scale-105  hover:bg-gray-900 mb:space-x-0 mb:w-1/2 mb:ml-20  ">
           <IconCard
             value="@Berenika14"
             label="Github"
@@ -79,7 +79,7 @@ export default function Contacts() {
             url="https://github.com/Berenika14"
           />
         </div>
-        <div className=" hover:scale-105 hover:bg-gray-900 ">
+        <div className=" hover:scale-105 hover:bg-gray-900 mb:space-x-0 mb:w-1/2 mb:ml-20">
           <IconCard
             value="@berenika"
             label="Twitter"

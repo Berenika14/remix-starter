@@ -15,9 +15,9 @@ export default function Projects({
 }) {
   return (
     <div className={className} style={style}>
-      <div className="mt-24 text-white gap-x-32 text-justify grid grid-cols-2 justify-items-center mx-14 ">
+      <div className="mt-24 text-white gap-x-32 text-justify grid grid-cols-2 justify-items-center mx-14 mb:grid-cols-1 ">
         <div>
-          <h2 className="text-white opacity-70 font-bold text-3xl mb-5 grid justify-items-center">
+          <h2 className="text-white opacity-70 font-bold text-3xl mb:text-xl mb-5 grid justify-items-center">
             Coder Heroes
           </h2>
           <a href="https://a.coderheroes.dev/">
@@ -27,12 +27,12 @@ export default function Projects({
               alt="coder"
             />
           </a>
-          <h3 className="font-bold opacity-80 text-2xl mt-10 mb-4 ml-4">
+          <h3 className="font-bold opacity-80 text-2xl mt-10 mb-4 ml-4 mb:text-lg">
             Backend Developer
           </h3>
           <ul
             role="list"
-            className="marker:text-orange-500 pr-10 text-lg list-disc pl-5 space-y-3 text-orange-50 opacity-50"
+            className="marker:text-orange-500 pr-10 text-lg mb:text-sm list-disc pl-5 space-y-3 text-orange-50 opacity-50"
           >
             <li className="pl-3">
               Developed the registering endpoint using Okta identity cloud
@@ -50,7 +50,7 @@ export default function Projects({
           </ul>
         </div>
         <div>
-          <h2 className="text-white opacity-70 font-bold text-3xl mb-5 grid justify-items-center">
+          <h2 className="text-white opacity-70 font-bold text-3xl mb:text-xl mb-5 grid justify-items-center mb:mt-20">
             Anywhere Fitness
           </h2>
           <a href="https://front-end-git-main-ft-anywhere-fitness-09.vercel.app/">
@@ -60,12 +60,12 @@ export default function Projects({
               alt="anywhere"
             />
           </a>
-          <h3 className="font-bold opacity-80 text-2xl mt-10 mb-4 ml-4">
+          <h3 className="font-bold opacity-80 text-2xl mt-10 mb-4 ml-4  mb:text-lg">
             Frontend Developer
           </h3>
           <ul
             role="list"
-            className="marker:text-orange-500 pr-10 text-lg list-disc pl-5 space-y-3 text-orange-50 opacity-50"
+            className="marker:text-orange-500 pr-10 text-lg mb:text-sm list-disc pl-5 space-y-3 text-orange-50 opacity-50"
           >
             <li className="pl-3">
               Created a Fitness Class Management platform that allows users to
@@ -87,8 +87,8 @@ export default function Projects({
       <h3 className="text-white opacity-80 text-xl mt-10 mb-8 px-10 ">
         Tech Stack used to create above applications
       </h3>
-      <div className="flex flex-row flex-wrap justify-evenly ">
-        <div className=" flex flex-row flex-wrap space-between space-x-16  w-screen px-10">
+      <div className="flex flex-row flex-wrap mb:w-1/2 justify-evenly   ">
+        <div className=" flex flex-row flex-wrap space-between space-x-16 w-screen px-10 ">
           <Badge
             src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
             alt="react badge"
@@ -148,7 +148,7 @@ export default function Projects({
 
         <div
           style={{ marginTop: 20, marginBottom: 40 }}
-          className=" flex flex-row flex-wrap space-x-16 w-screen
+          className=" flex flex-row flex-wrap  space-x-16 w-screen
        px-10"
         >
           <Badge

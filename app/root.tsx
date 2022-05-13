@@ -25,7 +25,8 @@ export function links() {
 function HeaderLink({ to, children }: { to: string; children: string }) {
   return (
     <Link
-      className="px-4 py-2 hover:underline hover:text-orange-400 text-white text-lg font-medium "
+      className="px-4 py-4 
+      inline-block hover:underline hover:text-orange-400 text-white text-lg font-medium mb:text-sm"
       to={to}
     >
       {children}
@@ -39,15 +40,16 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-black">
-        <header className="flex flex-row  p-4 ">
-          <div className="flex-1">
-            <HeaderLink to="/">Home</HeaderLink>
-
-            <HeaderLink to="/projects">Recent Projects</HeaderLink>
-            <HeaderLink to="/contacts">Contacts</HeaderLink>
+      <body className="bg-black relative">
+        <header className="top-0 z-50 mb:px-2 sm:sticky sticky bg-black">
+          <div className="flex flex-row">
+            <div className="flex-1">
+              <HeaderLink to="/">Home</HeaderLink>
+              <HeaderLink to="/projects">Recent Projects</HeaderLink>
+              <HeaderLink to="/contacts">Contacts</HeaderLink>
+            </div>
+            <div className=" text-white mb:text-sm py-4">Berenika Ahmetaj</div>
           </div>
-          <h3 className="flex-0 text-white">Berenika Ahmetaj</h3>
         </header>
 
         <Outlet />
